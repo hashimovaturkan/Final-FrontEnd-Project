@@ -1,0 +1,33 @@
+.tabs{
+    @include flexbox;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    &__separate{
+        display: inline-block;
+        padding: 12px 15px;
+        min-width: 104px;
+        &:not(:first-child){
+            margin-left: 0.8rem;
+        }
+    }
+    &__text{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.8rem;
+        color: $white;
+        font-weight: $fw-medium;
+    }
+    &__adjacent{
+        padding: 1.5rem 5rem;
+        color: #fff;
+        flex: 1 1 auto;
+        white-space: nowrap;
+        &--isActive{
+            background-color: $black-dark-mode;
+            box-shadow: $shadow;
+            border-radius: 0.8rem;
+            color: $brand-color-light;
+        }
+    }
+}

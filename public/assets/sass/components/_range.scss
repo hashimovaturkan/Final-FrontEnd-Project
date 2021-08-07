@@ -1,0 +1,74 @@
+.range{
+    padding: 14px;
+    position: relative;
+    background-color: $black-dark-mode;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    &__content{
+        @include flexbox(space-between);
+    }
+    &__number{
+        background-color: $black-dark-mode;
+        border:none;
+        width: 3rem;
+        outline: none;
+        color: $white;
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+    }
+    &__main{
+        @include flexbox
+    }
+    &__measure{
+        line-height: 2.4rem;
+        font-weight: $fw-medium;
+        color: $white;
+        width: 9.6rem;
+        border-left: 1px solid $white-pale;
+    }
+    &__active{
+        padding-left: 1.6rem;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-left: 4rem;
+            margin-right: 1rem;
+            width: 0;
+            height: 0;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-top: 0.5rem solid $white;
+        }
+    }
+    &__slider{
+        position: absolute;
+        top:100%;
+        left: 0%;
+        width: 100%;
+        -webkit-appearance: none;
+        height: 7px;
+        background: rgb(24, 28, 31);
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+        background-size: 70% 100%;
+        background-repeat: no-repeat;
+        &::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: $brand-color;
+            cursor: pointer;
+            box-shadow: 0 0 2px 0 #555;
+        }
+        &::-webkit-slider-runnable-track{
+            -webkit-appearance: none;
+            box-shadow: none;
+            border: none;
+            background: transparent;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+//color
+$gray: #F0F4F0;
+$white: #fff;
+$white-pale: rgba(#fff, .5);
+$brand-color-light: #C9FFC7;
+$brand-color: darken($brand-color-light, .001);
+$black: #181C1F;
+$black-v2: #242424;
+$green: #12C097;
+$green-v2: #008080;
+$pure-green: #7DFF83;
+$blue:#6699CC;
+$pink: #F9BECC;
+$dark-color: #2F4F4F;
+$purple: #8B72BE;
+$red:#EC1C24;
+$rose-red: #FF496A;
+$wooden: #B38B6D;
+$black-dark-mode: #22252C;
+$black-dark-mode-v2: #3B4046;
+$warning: #FFB47D;
+
+$gradient-color: radial-gradient(109.88% 109.88% at 50% 52.82%, #3B4046 0%, #22252C 100%);
+$line-color: rgba($white, .2);
+$hdr-top-text-clr: rgba($white, .7); //header top color 
+$shadow: 0px 4px 24px rgba(24, 28, 31, 0.2);
+
+$border-radius: 8px;
+
+$carousel-dots:rgba(201,255,199,0.2);
+
+//font
+$default-font-size:1.6rem;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;

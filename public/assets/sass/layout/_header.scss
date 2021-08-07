@@ -1,0 +1,170 @@
+.header{
+    &__top{
+        background-color: $black-dark-mode-v2;
+    }
+    &__top-inner{
+        @include flexbox(space-between);
+
+    }
+    &__top-info{
+        display: flex;
+    }
+    &__top-link{
+        font-size: 1.4rem;
+        color: $hdr-top-text-clr;
+        transition: 0.5s all;
+        cursor: pointer;
+        &:not(:last-child){
+            display: inline-block;
+            margin-right: 3rem;
+        }
+        &:hover,&:focus{
+            color: $white;
+        }
+    }
+    &__top-main{
+        @include flexbox(flex-end);
+    }
+
+    &__currency{
+        margin-right: 3rem;
+        color: $hdr-top-text-clr;
+    }
+
+    &__phone{
+        @include flexbox();
+        & i{
+            color: $hdr-top-text-clr;
+            transition: 0.5s all ease-in-out;
+        }
+        &__numbers{
+            color: $hdr-top-text-clr;
+            transition: 0.5s all ease-in-out;
+        }
+        &:focus i,&:focus &__numbers,
+        &:active i,&:active &__numbers,
+        &:hover i,&:hover &__numbers{
+            color: $brand-color-light;
+        }
+        
+        
+    }
+    &__lang{
+        margin-left: 2rem;
+        padding: 1.6rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+        &__item-link{
+            text-transform: uppercase;
+        }
+        &__current{
+            cursor: pointer;
+            font-weight: 500;
+            color: $hdr-top-text-clr;
+            &::after{
+               content: '';
+               display: inline-block;
+               border: 2px solid $white-pale;
+               border-left: none;
+               border-top: none;
+               width: 1rem;
+               height: 1rem;
+               margin-left: 1.6rem;
+               transform: rotate(45deg);
+               margin-bottom: 0.4rem;
+            }
+            &:hover{
+                color: $hdr-top-text-clr;
+            }
+            
+        }
+        &:focus{
+            background-color: $black-dark-mode;
+            color: $hdr-top-text-clr;
+        }
+    }
+
+    &__bottom{
+        margin-top: 2.4rem;
+        @include flexbox(space-between)
+    }
+    &__logo{
+        margin-right: 4.08rem;
+    }
+    &__navbar{
+        @include flexbox(flex-start);
+    }
+    &__list{
+        display: flex;
+    }
+    &__list-item{
+        margin: 0 1.7rem;
+        &:first-child{
+            margin-left: 0%;
+        }
+    }
+    &__item-link{
+        text-transform: uppercase;
+        line-height: 2.4rem;
+        cursor: pointer;
+        color:$white;
+        font-weight: 500;
+        transition: 0.5s color;
+        &:focus,
+        &:active,
+        &:hover{
+            color: $brand-color-light;
+        }
+
+    }
+    &__user-side{
+        @include flexbox(flex-end);
+    }
+    &__user-account{
+        @include flexbox;
+        &__text{
+            margin-left: 0.8rem;
+            font-weight: 500;
+            line-height: 2.4rem;
+            color: $white;
+            transition: 0.5s color;
+        }
+        & i{
+            transition: 0.5s color;
+        }
+        &:focus i, &:focus span,
+        &:active i, &:active span,
+        &:hover i, &:hover span{
+            color: $brand-color-light;
+        }
+    }
+    &__cart{
+        @include flexbox;
+        margin-left: 3.2rem;
+        margin-right: 2rem;
+        position: relative;
+        &__count{
+            position: absolute;
+            background-color: $red;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            border-radius: 50%;
+            padding: 0.4rem 0.8rem;
+            font-weight: 500;
+            color: $white;
+            bottom: 70%;
+            left: 70%;
+        }
+        & i{
+            transform: 0.5s color;
+        }
+        & i:hover{
+            color: $brand-color-light;
+        }
+        
+    }
+
+
+}
+
+  

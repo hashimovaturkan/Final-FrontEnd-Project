@@ -1,0 +1,27 @@
+body{
+    font-family: 'Yolk';
+    font-size: $default-font-size;
+    color: rgba($white,0.5);
+}
+
+.heading{
+    &--calc{
+        margin-bottom: 4.8rem;
+    }
+    &--center{
+        text-align: center;
+    }
+    &__title{
+        font-weight: $fw-bold;
+        color: $brand-color-light;
+        margin-bottom: 0.8rem;
+        font-size: 4rem;
+        line-height: 5.6rem;
+    }
+    &__text{
+        margin: 0 auto;
+        font-size: $default-font-size; //home
+        line-height: 2.8rem; //home
+        max-width: 80rem; //home
+    }
+}

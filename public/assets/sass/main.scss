@@ -1,0 +1,26 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/functions';
+
+@import './vendors/bootstrap/bootstrap-grid.scss';
+@import './vendors/bootstrap/bootstrap-utilities.scss';
+@import './vendors/bootstrap/bootstrap-reboot.scss';
+@import './vendor-extensions/bootstrap/bootstrap';
+
+@import './base/resets';
+@import './base/base';
+@import "./base/fonts";
+@import "./base/icon-fonts";
+@import './base/typography';
+@import './base/utilities';
+@import './base/animation';
+
+@import './components/button';
+@import './components/carousel';
+@import './components/calculator';
+@import './components/tabs';
+@import './components/range';
+
+@import './layout/header';
+
+@import './pages/home';

@@ -1,0 +1,41 @@
+.btn{
+    @include flexbox;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1.6rem;
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+    &--primary-light{
+        background-color: $brand-color-light;
+        color: $black;
+        font-weight: 500;
+        min-width: 144px;
+        padding: 1.6rem 3.2rem;
+        border-radius: $border-radius;
+        &:hover{
+            background-color: #c9ffc7cc;
+            color: $black;
+        }
+        &--little{
+            display: inline-block;
+            text-align: center;
+            min-width: 20rem;
+        }
+        &--bigger{
+            margin: 5.6rem auto 0;
+            min-width: 32rem;
+        }
+    }
+    &--header{
+        padding: 0.8rem 1rem;
+        margin-left: 21px;
+    }
+    &--primary-dark{
+        
+       
+    }
+    
+}

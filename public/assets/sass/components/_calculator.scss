@@ -1,0 +1,67 @@
+.calculator{
+    padding: 6.4rem 10.5rem 4.8rem;
+    background-color: $black-dark-mode-v2;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    margin-bottom: 8.8rem;
+    // &__content{
+
+    // }
+    // &__tabs{
+
+    // }
+    & h6{
+        margin-bottom: 8px;
+        text-transform: capitalize;
+        line-height: 2.4rem;
+        font-size: $default-font-size;
+    }
+    &__service{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+    &__service-item{
+        display: flex;
+        margin-bottom: 1.5rem;
+        line-height: 2.4rem;
+    }
+    &__input{
+        width: 0%;
+        height: 0%;
+        &:checked + span{
+            background-color: $brand-color-light;
+        }
+        &:checked + span .calculator__input-icon{
+            display: inline-block;
+        }
+    }
+    &__input-icon{
+        position: absolute;
+        display: none;
+    }
+    &__custom-input{
+        border-radius: 0.4rem;
+        @include flexbox;
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+        border: 2px solid rgba(255,255,255,0.2);
+        background-color: transparent;
+        position: relative;
+    }
+    &__total{
+        text-align: center;
+        margin-top: 6.4rem;
+        &__dollar{
+            font-weight: $fw-semibold;
+            color: $white;
+            font-size: 6.4rem;
+            line-height: 8rem;
+        }
+        &__manat{
+            font-size: 3.2rem;
+            line-height: 4rem;
+        }
+    }
+}

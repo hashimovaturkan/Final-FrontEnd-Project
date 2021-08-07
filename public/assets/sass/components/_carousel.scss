@@ -1,0 +1,60 @@
+.carousel {
+    background-image: url("../icons/Vector-slider.svg");
+    border-radius: $border-radius;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    
+    &__wrapper{
+        background-image: $gradient-color;
+        border-radius: $border-radius;
+    }
+    &__content{
+        position: relative;
+        z-index: 3;
+        max-width: 65rem;
+        padding-right: 3rem;
+        padding-left: 5.2rem;
+        padding-top: 8rem;
+        padding-bottom: 14rem;
+    }
+    &__cell{
+        width: 100%;
+        height: auto;
+        margin-right: 10px;
+        border-radius: 5px;
+        position: relative;
+    }
+    &__text{
+        font-weight: 700;
+        color: $white;
+        font-size: 48px;
+        line-height: 150%
+    }
+    &__desc{
+        max-width: 52rem;
+        margin-top: 2.4rem;
+        margin-bottom: 5.8rem;
+        line-height: 2.8rem;
+        color: $white;
+    }
+    &__img{
+        max-width: 55rem;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+
+    }
+  }
+
+.flickity-page-dots .dot {
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background-color: $carousel-dots;
+    margin: -10px 8px;
+}
+
+.flickity-page-dots .dot.is-selected {
+    width: 32px;
+    background-color: $brand-color-light;
+  }
