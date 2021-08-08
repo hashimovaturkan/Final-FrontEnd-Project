@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
+    <!-- nece eliyim kicildende slayt olsun, card hamisina bax hissesi, slidera toxunannan sorada islesin -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +24,14 @@
                     </div>
                     <div class="header__top-main">
                         <div class="header__currency">
-                            <span> 1 TRY - 0.20 AZN </span>
-                            <span class="d-none"> 1 USD - 1.70 AZN </span>
+                            <span class="header__current-item header__current-item--animation-1"> 1 TRY - 0.20 AZN </span>
+                            <span class="header__current-item header__current-item--animation-2"> 1 USD - 1.70 AZN </span>
                         </div>
                         <a href="tel:+994123108707" class="header__phone">
                             <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                             <span class="header__phone__numbers">+994123108707</span>
                         </a>
-                        <div class="header__lang">
+                        <div class="header__lang" tabindex="0">
                             <a class="header__lang__current">AZE</a>
                             <ul class="header__lang__list d-none">
                                 <li class="header__lang__list-item"><a class="header__lang__item-link">ENG</a></li>
@@ -44,6 +45,61 @@
         </div>
         <div class="container">
             <div class="header__bottom">
+                <div class="header__hidden">
+                    <div class="menu__btn">
+                        <svg viewBox="0 0 100 80" width="20" height="20" fill="white">
+                            <rect width="100" height="10"></rect>
+                            <rect y="30" width="100" height="10"></rect>
+                            <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                    </div>
+                    <a href="#" class="header__cart header__cart--little">
+                        <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                    </a>
+                </div>
+                <div class="menu">
+                    <div class="menu__head">
+                        <a href="#" class="menu__title">
+                            <svg width="111" height="32" viewBox="0 0 111 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.95907 0.800049C0.876429 0.800049 0 1.67648 0 2.75912C0 3.84177 0.876429 4.71819 1.95907 4.71819C3.04172 4.71819 3.91815 3.84177 3.91815 2.75912C3.91815 1.67648 3.04172 0.800049 1.95907 0.800049ZM1.95907 4.63227C0.927984 4.63227 0.068741 3.79021 0.068741 2.74194C0.068741 1.71084 0.910799 0.851601 1.95907 0.851601C2.99017 0.851601 3.84941 1.69366 3.84941 2.74194C3.83222 3.79021 2.99017 4.63227 1.95907 4.63227Z" fill="#C9FFC7"/>
+                                <path d="M1.78722 2.19202H0.945162L0.927979 2.3295H1.27168L1.08264 3.36059H1.2373L1.42634 2.3295H1.77004L1.78722 2.19202Z" fill="#064133"/>
+                                <path d="M2.37143 2.81067L2.11366 2.19202H1.94181L1.7356 3.36059H1.90744L2.06211 2.43261L2.33707 3.08563H2.35425L2.85261 2.44979L2.68076 3.36059H2.83543L3.04164 2.19202H2.86979L2.37143 2.81067Z" fill="#064133"/>
+                                <path d="M19.9173 19.3253L9.22829 5.06189H4.89771L19.9173 25.0994L20.2266 25.4947H23.9385V24.687V8.89411H19.9173V19.3253Z" fill="#C9FFC7"/>
+                                <path d="M33.3903 10.8016C31.225 10.8016 29.4549 11.5062 28.0973 12.9154C26.7226 14.3073 26.0352 16.0774 26.0352 18.1396C26.0352 20.2361 26.7397 22.0062 28.1317 23.3981C29.5237 24.7901 31.3796 25.4947 33.6652 25.4947C36.3289 25.4947 38.3739 24.498 39.7315 22.5045L39.869 22.3155L36.6898 20.4767L36.5695 20.6314C35.9336 21.4734 34.9713 21.9031 33.7168 21.9031C31.8436 21.9031 30.6922 21.2157 30.1939 19.7893H40.2642L40.2986 19.6003C40.4017 18.9816 40.4361 18.552 40.4361 18.1396C40.4361 16.0602 39.783 14.3417 38.4426 12.9154C37.1366 11.5234 35.4525 10.8016 33.3903 10.8016ZM30.1423 16.6617C30.5891 15.201 31.7577 14.3589 33.4075 14.3589C34.9197 14.3589 36.0711 15.2181 36.4835 16.6617H30.1423Z" fill="#C9FFC7"/>
+                                <path d="M55.7649 10.8016C53.7199 10.8016 51.9499 11.5234 50.5407 12.9497C49.1144 14.3761 48.427 16.0774 48.427 18.1568C48.427 20.2189 49.1316 21.989 50.5407 23.3809C51.9499 24.7901 53.7028 25.4947 55.7649 25.4947C57.8271 25.4947 59.5972 24.7901 60.9891 23.3809C62.4155 21.9546 63.1372 20.2018 63.1372 18.1568C63.1372 16.1289 62.4155 14.3761 60.9891 12.9497C59.5628 11.5234 57.8099 10.8016 55.7649 10.8016ZM58.2395 20.6829C57.5693 21.3531 56.7617 21.6797 55.7649 21.6797C54.7682 21.6797 53.9605 21.3531 53.3075 20.7001C52.6717 20.0299 52.3451 19.1878 52.3451 18.1739C52.3451 17.16 52.6717 16.318 53.3075 15.6478C53.9777 14.9776 54.7854 14.651 55.7821 14.651C56.7788 14.651 57.5865 14.9776 58.2567 15.6478C58.9098 16.3008 59.2535 17.16 59.2535 18.1739C59.2535 19.1878 58.8926 20.0127 58.2395 20.6829Z" fill="#C9FFC7"/>
+                                <path d="M74.7025 19.9439C74.187 20.9922 73.1043 21.6109 71.7811 21.6109C70.8016 21.6109 69.9767 21.2844 69.3408 20.6485C68.705 19.9783 68.3785 19.1363 68.3785 18.1567C68.3785 16.1289 69.8048 14.6682 71.7811 14.6682C73.0528 14.6682 74.1526 15.3212 74.6682 16.3523L74.7713 16.5585L78.1395 14.5823L78.0536 14.3932C76.9022 12.1764 74.5135 10.7844 71.8155 10.7844C69.7361 10.7844 67.9661 11.489 66.5569 12.8982C65.1477 14.3245 64.4775 16.043 64.4775 18.1224C64.4775 20.2017 65.1649 21.9202 66.5741 23.3465C67.9832 24.7557 69.7533 25.4603 71.8327 25.4603C74.4619 25.4603 76.885 24.0683 78.1223 21.8343L78.2254 21.6452L74.8228 19.7034L74.7025 19.9439Z" fill="#C9FFC7"/>
+                                <path d="M81.4735 5.92114C80.2018 5.92114 79.1191 7.00379 79.1191 8.29266C79.1191 9.56434 80.2018 10.647 81.4735 10.647C82.7795 10.647 83.845 9.59871 83.845 8.29266C83.8622 7.00379 82.7623 5.92114 81.4735 5.92114Z" fill="#C9FFC7"/>
+                                <path d="M91.3203 7.58813L87.4022 8.77389V11.4547H85.0479V15.2354H87.4022V20.6314C87.4022 22.453 87.8146 23.656 88.691 24.4465C89.4815 25.1511 90.6845 25.4947 92.3342 25.4947C92.8842 25.4947 93.5028 25.4604 94.173 25.3745L94.3621 25.3573V21.7828L94.1386 21.8C92.8498 21.8687 91.9905 21.8859 91.5953 21.5079C91.4063 21.336 91.3203 21.0439 91.3203 20.6314V15.2354H94.3792V11.4547H91.3203V7.58813Z" fill="#C9FFC7"/>
+                                <path d="M105.566 11.8328L102.714 20.4939L99.4143 11.9702L99.3628 11.8328H95.0837L100.72 25.1338C100.102 26.8351 99.1909 27.5053 97.5068 27.5053C97.4724 27.5053 97.4381 27.5053 97.4209 27.5053H97.1975V31.1657L97.4037 31.1829C97.5755 31.2001 97.7474 31.2001 97.9192 31.2001C101.202 31.2001 103.384 29.4301 104.742 25.6494L109.76 11.8499H105.566V11.8328Z" fill="#C9FFC7"/>
+                                <path d="M46.4163 8.89417H42.395V25.4947H46.4163V8.89417Z" fill="#C9FFC7"/>
+                                <path d="M83.5012 11.8328H79.48V25.4947H83.5012V11.8328Z" fill="#C9FFC7"/>
+                            </svg>
+                        </a>
+                        <i class="icon-close_two_tone menu__close-icon" id="closeIcon"></i>
+                    </div>
+                    <nav class="menu__navbar">
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Haqqımızda</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Tariflər</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Xidmətlər</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Mağazalar</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Yeniliklər</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__list-link">Əlaqə</a></li>
+
+                        </ul>
+                    </nav>
+                    <div class="menu__footer">
+                        <div class="menu__lang">
+                            <a href="" class="btn btn--menu mr-10">AZE</a>
+                            <a href="" class="btn btn--menu mr-10">ENG</a>
+                            <a href="" class="btn btn--menu">RUS</a>
+                        </div>
+                        <a href="" class="btn btn--menu">
+                            <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                            <span>+994123108707</span>
+                        </a>
+                    </div>
+                </div>
                 <div class="header__navbar">
                     <a href="./index.html" class="header__logo">
                         <svg width="164" height="48" viewBox="0 0 164 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +133,7 @@
                         <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                         <span class="header__user-account__text">Hesabım</span>
                     </a>
-                    <a href="#" class="header__cart">
+                    <a href="#" class="header__cart header__cart--bigger">
                         <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                         <span class="header__cart__count">0</span>
                     </a>
@@ -96,6 +152,7 @@
                             <a href="" class="btn btn--primary-light btn--primary-light--little">Ətraflı</a>
                         </div>
                         <img class="carousel__img" src="./public/assets/images/slider/saytturki.png" alt="pic">
+                        <a class="btn btn--primary-light btn--primary-light--large carousel__btn">Ətraflı</a>
                     </div>
                     <div class="carousel__cell">
                         <div class="carousel__content">
@@ -104,6 +161,7 @@
                             <a href="" class="btn btn--primary-light btn--primary-light--little">Ətraflı</a>
                         </div>
                         <img class="carousel__img" src="./public/assets/images/slider/bv.png" alt="pic">
+                        <a class="btn btn--primary-light btn--primary-light--large carousel__btn">Ətraflı</a>
                     </div>
                     <div class="carousel__cell">
                         <div class="carousel__content">
@@ -112,6 +170,7 @@
                             <a href="" class="btn btn--primary-light btn--primary-light--little">Ətraflı</a>
                         </div>
                         <img class="carousel__img" src="./public/assets/images/slider/cargovelo.png" alt="pic">
+                        <a class="btn btn--primary-light btn--primary-light--large carousel__btn">Ətraflı</a>
                     </div>
                     <div class="carousel__cell">
                         <div class="carousel__content">
@@ -120,6 +179,7 @@
                             <a href="" class="btn btn--primary-light btn--primary-light--little">Ətraflı</a>
                         </div>
                         <img class="carousel__img" src="./public/assets/images/slider/saytamerika.png" alt="pic">
+                        <a class="btn btn--primary-light btn--primary-light--large carousel__btn">Ətraflı</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +196,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-40 pl-16 pr-16">
                         <h6 >Ölkə seçin</h6>
                         <div class="calculator__tabs">
-                            <div class="tabs tabs__separate">
+                            <div class="tabs tabs__separate tabs__separate--isActive">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24 0H6C2.68629 0 0 2.68629 0 6V24C0 27.3137 2.68629 30 6 30H24C27.3137 30 30 27.3137 30 24V6C30 2.68629 27.3137 0 24 0Z" fill="#E30A17"/>
                                     <path d="M12.5 22C16.366 22 19.5 18.866 19.5 15C19.5 11.134 16.366 8 12.5 8C8.63401 8 5.5 11.134 5.5 15C5.5 18.866 8.63401 22 12.5 22Z" fill="white"/>
@@ -235,8 +295,8 @@
                                     <input class="range__number" type="number" value="0">
                                     <div class="range__measure">
                                         <span class="range__active">sm</span>
-                                        <ul class="d-none">
-                                            <li><a>m</a></li>
+                                        <ul class="range__dropdown d-none">
+                                            <li><a class="range__dropdown__link">m</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -250,8 +310,8 @@
                                     <input class="range__number" type="number" value="0">
                                     <div class="range__measure">
                                         <span class="range__active">sm</span>
-                                        <ul class="d-none">
-                                            <li><a>m</a></li>
+                                        <ul class="range__dropdown d-none">
+                                            <li><a class="range__dropdown__link">m</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -267,8 +327,8 @@
                                     <input class="range__number" type="number" value="0">
                                     <div class="range__measure">
                                         <span class="range__active">sm</span>
-                                        <ul class="d-none">
-                                            <li><a>m</a></li>
+                                        <ul class="range__dropdown d-none">
+                                            <li><a class="range__dropdown__link">m</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -282,8 +342,8 @@
                                     <input class="range__number" type="number" value="0">
                                     <div class="range__measure">
                                         <span class="range__active">kq</span>
-                                        <ul class="d-none">
-                                            <li><a>q</a></li>
+                                        <ul class="range__dropdown d-none">
+                                            <li><a class="range__dropdown__link"></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -359,7 +419,7 @@
                     </label>
                     <span class="checkbox__control">
                 </div>
-                <button class="btn btn--primary-light btn--primary-light--bigger">Hesabla</button>
+                <button class="btn btn--primary-light btn--primary-light--bigger calculator__btn">Hesabla</button>
                 <div class="calculator__total">
                     <div class="calculator__total__dollar">
                         $<span>28.50</span>
@@ -371,6 +431,430 @@
             </div>
         </section>    
     </div>
+    <section class="work">
+        <div class="container">
+            <div class="heading--center">
+                <h2 class="heading__title">Necə işləyirik?</h2>
+            </div>
+            <div class="work__wrapper"> 
+                <div class="work__box">
+                    <div class="box">
+                        <i class="icon-map-outline_two_tone icon-lg box__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>
+                        <div class="box__body">
+                            <h4 class="box__title">Qeydiyyatdan keç</h4>
+                            <div class="box__text">Saytımızda qeydiyyatdan keçməklə, xaricdə daimi ünvana sahib olun</div>
+                            <a href="#" class="btn btn--primary-dark">Ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__box">
+                    <div class="box">
+                        <i class="icon-Package-v2_two_tone icon-lg box__icon"><span class="path1"></span><span class="path2"></span></i>                        <div class="box__body">
+                            <h4 class="box__title">Ödəmə et</h4>
+                            <div class="box__text">Visa, Master bank kartları E-Manat vasitəsi ilə ödəniş Yerində nəğd ödəniş</div>
+                            <a href="#" class="btn btn--primary-dark">Ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__box">
+                    <div class="box">
+                        <i class="icon-credit-card_two_tone icon-lg box__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>                        <div class="box__body">
+                            <h4 class="box__title">Bağlamanı əldə et</h4>
+                            <div class="box__text">Bağlamanı Bakı anbarımızdan əldə edə və ya kuryer xidmətimizdən istifadə edə bilərsiniz.</div>
+                            <a href="#" class="btn btn--primary-dark">Ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="tariffs">
+            <div class="heading--btwn">
+                <div class="heading__title">Tariflər</div>
+                <div class="tariffs__tabs">
+                    <div class="tabs tabs__separate tabs__separate--isActive">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 0H6C2.68629 0 0 2.68629 0 6V24C0 27.3137 2.68629 30 6 30H24C27.3137 30 30 27.3137 30 24V6C30 2.68629 27.3137 0 24 0Z" fill="#E30A17"/>
+                            <path d="M12.5 22C16.366 22 19.5 18.866 19.5 15C19.5 11.134 16.366 8 12.5 8C8.63401 8 5.5 11.134 5.5 15C5.5 18.866 8.63401 22 12.5 22Z" fill="white"/>
+                            <path d="M15 21C18.0376 21 20.5 18.3137 20.5 15C20.5 11.6863 18.0376 9 15 9C11.9624 9 9.5 11.6863 9.5 15C9.5 18.3137 11.9624 21 15 21Z" fill="#E30A17"/>
+                            <path d="M18.5 15L24.5 16.8543L20.7908 12V18L24.5 13.1457L18.5 15Z" fill="white"/>
+                        </svg>
+                        <span class="tabs__text tariff__tabs-text">Türkiyə</span>
+                    </div>
+                    <div class="tabs tabs__separate">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="31" height="30">
+                            <path d="M23.9873 0H5.9873C2.6736 0 -0.0126953 2.68629 -0.0126953 6V24C-0.0126953 27.3137 2.6736 30 5.9873 30H23.9873C27.301 30 29.9873 27.3137 29.9873 24V6C29.9873 2.68629 27.301 0 23.9873 0Z" fill="#B22234"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                            <path d="M23.9873 0H5.9873C2.6736 0 -0.0126953 2.68629 -0.0126953 6V24C-0.0126953 27.3137 2.6736 30 5.9873 30H23.9873C27.301 30 29.9873 27.3137 29.9873 24V6C29.9873 2.68629 27.301 0 23.9873 0Z" fill="#B22234"/>
+                            <path d="M-0.0126953 3.46118H49.9873H-0.0126953ZM49.9873 8.07785H-0.0126953H49.9873ZM-0.0126953 12.6917H49.9873H-0.0126953ZM49.9873 17.3084H-0.0126953H49.9873ZM-0.0126953 21.9223H49.9873H-0.0126953ZM49.9873 26.539H-0.0126953H49.9873Z" fill="black"/>
+                            <path d="M49.9873 27.6917H-0.0126953V25.3834H49.9873V27.6917ZM49.9873 23.0778H-0.0126953V20.7695H49.9873V23.0778ZM49.9873 18.4611H-0.0126953V16.1528H49.9873V18.4611ZM49.9873 13.8472H-0.0126953V11.5389H49.9873V13.8472ZM49.9873 9.23057H-0.0126953V6.92224H49.9873V9.23057ZM49.9873 4.61668H-0.0126953V2.30835H49.9873V4.61668Z" fill="white"/>
+                            <path d="M22.7873 0H-0.0126953V16.1528H22.7873V0Z" fill="#3C3B6E"/>
+                            <path d="M1.89066 0.69165L2.4351 2.3611L1.00732 1.33054H2.7601L1.34344 2.36387L1.89066 0.69165Z" fill="white"/>
+                            <path d="M1.88983 3.92236L2.43428 5.59181L1.00928 4.55847H2.76205L1.33983 5.59181L1.88983 3.92236Z" fill="white"/>
+                            <path d="M1.89047 7.15259L2.43492 8.82203L1.0127 7.7887H2.76547L1.34325 8.82203L1.89047 7.15259Z" fill="white"/>
+                            <path d="M1.89047 10.3833L2.43492 12.0555L1.0127 11.0222H2.76547L1.34325 12.0555L1.89047 10.3833Z" fill="white"/>
+                            <path d="M1.89047 13.6167L2.43492 15.2861L1.0127 14.2528H2.76547L1.34325 15.2861L1.89047 13.6167Z" fill="white"/>
+                            <path d="M3.78467 2.30835L4.32911 3.97779L2.90967 2.94446H4.66245L3.24578 3.97779L3.78467 2.30835Z" fill="white"/>
+                            <path d="M3.785 5.53882L4.32945 7.20826L2.90723 6.17493H4.66L3.23778 7.20826L3.785 5.53882Z" fill="white"/>
+                            <path d="M3.785 8.76953L4.32945 10.439L2.90723 9.40564H4.66L3.23778 10.439L3.785 8.76953Z" fill="white"/>
+                            <path d="M3.785 12L4.32945 13.6694L2.90723 12.6361H4.66L3.23778 13.6694L3.785 12Z" fill="white"/>
+                            <path d="M5.68735 0.69165L6.23179 2.36109L4.80957 1.32776H6.56235L5.14013 2.36109L5.68735 0.69165Z" fill="white"/>
+                            <path d="M5.68735 3.92236L6.23179 5.59181L4.80957 4.55847H6.56235L5.14013 5.59181L5.68735 3.92236Z" fill="white"/>
+                            <path d="M5.68735 7.15259L6.23179 8.82203L4.80957 7.7887H6.56235L5.14013 8.82203L5.68735 7.15259Z" fill="white"/>
+                            <path d="M5.68735 10.3833L6.23179 12.0527L4.80957 11.0194H6.56235L5.1429 12.0555L5.68735 10.3833Z" fill="white"/>
+                            <path d="M5.68735 13.6167L6.23179 15.2861L4.80957 14.2528H6.56235L5.14013 15.2861L5.68735 13.6167Z" fill="white"/>
+                            <path d="M7.58969 2.30835L8.13414 3.97779L6.71191 2.94446H8.46469L7.04247 3.97779L7.58969 2.30835Z" fill="white"/>
+                            <path d="M7.58969 5.53882L8.13414 7.20826L6.71191 6.17493H8.46469L7.04247 7.20826L7.58969 5.53882Z" fill="white"/>
+                            <path d="M7.58969 8.76953L8.13414 10.439L6.71191 9.40564H8.46469L7.04247 10.439L7.58969 8.76953Z" fill="white"/>
+                            <path d="M7.58969 12L8.13414 13.6694L6.71191 12.6361H8.46469L7.04247 13.6694L7.58969 12Z" fill="white"/>
+                            <path d="M9.48471 0.69165L10.0292 2.36109L8.60693 1.32776H10.3597L8.93749 2.36109L9.48471 0.69165Z" fill="white"/>
+                            <path d="M9.48471 3.92236L10.0292 5.59181L8.60693 4.55847H10.3597L8.93749 5.59181L9.48471 3.92236Z" fill="white"/>
+                            <path d="M9.48471 7.15259L10.0292 8.82203L8.60693 7.7887H10.3597L8.93749 8.82203L9.48471 7.15259Z" fill="white"/>
+                            <path d="M9.48471 10.3833L10.0292 12.0527L8.60693 11.0194H10.3597L8.94027 12.0555L9.48471 10.3833Z" fill="white"/>
+                            <path d="M9.48471 13.6167L10.0292 15.2861L8.60693 14.2528H10.3597L8.93749 15.2861L9.48471 13.6167Z" fill="white"/>
+                            <path d="M11.3871 2.30835L11.9315 3.97779L10.5093 2.94446H12.2648L10.8426 3.97779L11.3871 2.30835Z" fill="white"/>
+                            <path d="M11.3871 5.53882L11.9315 7.20826L10.5093 6.17493H12.2648L10.8426 7.20826L11.3871 5.53882Z" fill="white"/>
+                            <path d="M11.3871 8.76953L11.9315 10.439L10.5093 9.40564H12.2648L10.8426 10.439L11.3871 8.76953Z" fill="white"/>
+                            <path d="M11.3871 12L11.9315 13.6694L10.5093 12.6361H12.2648L10.8426 13.6694L11.3871 12Z" fill="white"/>
+                            <path d="M13.2894 0.69165L13.8338 2.36109L12.4116 1.32776H14.1644L12.7422 2.36109L13.2894 0.69165Z" fill="white"/>
+                            <path d="M13.2894 3.92236L13.8338 5.59181L12.4116 4.55847H14.1644L12.7422 5.59181L13.2894 3.92236Z" fill="white"/>
+                            <path d="M13.2894 7.15259L13.8338 8.82203L12.4116 7.7887H14.1644L12.7422 8.82203L13.2894 7.15259Z" fill="white"/>
+                            <path d="M13.2894 10.3833L13.8338 12.0527L12.4116 11.0194H14.1644L12.7422 12.0555L13.2894 10.3833Z" fill="white"/>
+                            <path d="M13.2894 13.6167L13.8338 15.2861L12.4116 14.2528H14.1644L12.7422 15.2861L13.2894 13.6167Z" fill="white"/>
+                            <path d="M15.1846 2.30835L15.729 3.97779L14.3096 2.94446H16.0624L14.6401 3.97779L15.1846 2.30835Z" fill="white"/>
+                            <path d="M15.1844 5.53882L15.7289 7.20826L14.3066 6.17493H16.0594L14.6372 7.20826L15.1844 5.53882Z" fill="white"/>
+                            <path d="M15.1844 8.76953L15.7289 10.439L14.3066 9.40564H16.0594L14.6372 10.439L15.1844 8.76953Z" fill="white"/>
+                            <path d="M15.1844 12L15.7289 13.6694L14.3066 12.6361H16.0594L14.6372 13.6694L15.1844 12Z" fill="white"/>
+                            <path d="M17.0877 0.69165L17.6322 2.3611L16.21 1.33054H17.9627L16.5433 2.36387L17.0877 0.69165Z" fill="white"/>
+                            <path d="M17.0877 3.92236L17.6322 5.59181L16.21 4.56125H17.9627L16.5433 5.59459L17.0877 3.92236Z" fill="white"/>
+                            <path d="M17.0877 7.15259L17.6322 8.82203L16.21 7.79148H17.9627L16.5433 8.82481L17.0877 7.15259Z" fill="white"/>
+                            <path d="M17.0877 10.3833L17.6322 12.0527L16.21 11.0222H17.9627L16.5433 12.0555L17.0877 10.3833Z" fill="white"/>
+                            <path d="M17.0877 13.6167L17.6322 15.2861L16.21 14.2528H17.9627L16.5433 15.2861L17.0877 13.6167Z" fill="white"/>
+                            <path d="M18.9901 2.30835L19.5345 3.97779L18.1123 2.94446H19.8651L18.4429 3.97779L18.9901 2.30835Z" fill="white"/>
+                            <path d="M18.9901 5.53882L19.5345 7.20826L18.1123 6.17493H19.8651L18.4429 7.20826L18.9901 5.53882Z" fill="white"/>
+                            <path d="M18.9901 8.76953L19.5345 10.439L18.1123 9.40564H19.8651L18.4429 10.439L18.9901 8.76953Z" fill="white"/>
+                            <path d="M18.9901 12L19.5345 13.6694L18.1123 12.6361H19.8651L18.4429 13.6694L18.9901 12Z" fill="white"/>
+                            <path d="M20.8843 0.69165L21.4315 2.36387L20.0093 1.33054H21.7621L20.3398 2.36387L20.8843 0.69165Z" fill="white"/>
+                            <path d="M20.8851 3.92236L21.4295 5.59181L20.0073 4.55847H21.7601L20.3379 5.59181L20.8851 3.92236Z" fill="white"/>
+                            <path d="M20.8851 7.15259L21.4295 8.82203L20.0073 7.7887H21.7601L20.3379 8.82203L20.8851 7.15259Z" fill="white"/>
+                            <path d="M20.8843 10.3833L21.4315 12.0555L20.0093 11.0222H21.7621L20.3398 12.0555L20.8843 10.3833Z" fill="white"/>
+                            <path d="M20.8851 13.6167L21.4295 15.2861L20.0073 14.2528H21.7601L20.3379 15.2861L20.8851 13.6167Z" fill="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="30" height="30" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>  
+                        <span class="tabs__text tariff__tabs-text">ABŞ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tariffs__box">
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">0.001 kq’dan 0.100 kq’a qədər</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">1 USD</div>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">1 USD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">0.101 kq’dan 0.249 kq’a qədər</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">2 USD</div>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">2 USD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">0.250 kq’dan 0.499 kq’a qədər</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">3 USD</div>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">3 USD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">0.500 kq’dan 0.749 kq’a qədər</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">4 USD</div>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">4 USD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">0.750 kq’dan 0.999 kq’a qədər</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">4.2 USD</div>
+                            <del class="tariff__old-amount">4.2 USD</del>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">4.2 USD</div>
+                            <del class="tariff__old-amount">4.2 USD</del>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">1.00 kq’dan 4.999 kq’a qədər ( hər kq üçün )</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">4.5 USD</div>
+                            <del class="tariff__old-amount">4.5 USD</del>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">4.5 USD</div>
+                            <del class="tariff__old-amount">4.5 USD</del>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">5.00 kq’dan 9.999 kq’a qədər ( hər kq üçün )</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">4.3 USD</div>
+                            <del class="tariff__old-amount">4.3 USD</del>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">4.3 USD</div>
+                            <del class="tariff__old-amount">4.3 USD</del>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff">
+                    <div class="tariff__head">
+                        <i class="icon-Package-v2_two_tone icon-lg tariff__icon"><span class="path1"></span><span class="path2"></span></i>
+                        <h5 class="tariff__title">10.000 kq’dan çox ( hər kq üçün )</h5>
+                    </div>
+                    <div class="tariff__category">
+                        <div class="tariff__price">
+                            <div class="tariff__class">Adi məhsul</div>
+                            <div class="tariff__amount">4 USD</div>
+                            <del class="tariff__old-amount">4 USD</del>
+                        </div>
+                        <div class="tariff__price">
+                            <div class="tariff__class">Maye və kosmetik</div>
+                            <div class="tariff__amount">4 USD</div>
+                            <del class="tariff__old-amount">4 USD</del>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="shops">
+        <div class="container">
+            <div class="heading--btwn">
+                <h2 class="heading__title">Mağazalar</h2>
+                <a href="" class="btn btn--primary-dark btn--primary-dark--hover shops__btn--little">Hamısına bax</a>
+            </div>
+        </div>
+        <div class="carousel--none" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "groupCells": 1, "pageDots": false}'>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-1.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-2.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-3.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-4.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-5.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-6.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-7.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-8.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-9.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+            <div class="carousel__cell carousel__cell--store">
+                <a href="" class="carousel__store-link" >
+                    <img src="./public/assets/images/store/store-10.png" alt="" class="carousel__store-img">
+                </a>
+            </div>
+        </div>
+        <div class="container shops__btn--large">
+            <div class="col-12 col-md-12 col-sm-12">
+                <a href="/az/store.html" class="btn btn--primary-dark btn--primary-dark--large btn--primary-dark--hover">Hamısına bax</a>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="news">
+            <div class="news__inner">
+                <div class="news__main">
+                    <div class="heading--news">
+                        <h2 class="heading__title">Nə yenilik var?</h2>
+                        <p class="heading__text heading__text--home">Ən son yeniliklər və xəbərlərlə tanış olun</p>
+                    </div>
+                    <a href="" class="btn btn--primary-dark news__main__btn">Hamısına bax</a>
+                </div>
+                <div class="news__cards">
+                    <div class="card">
+                        <img src="./public/assets/images/card/blogkicikolcuuu.jpg" alt="Velocity balansınızı Milli Ön ilə artıra bilərsiniz !!!">
+                        <div class="card__body">
+                            <a href="">
+                                <h5 class="card__title">Velocity balansınızı Milli Ön ilə artıra bilərsiniz !!!</h5>
+                            </a>
+                            <p class="card__date">07.08.2021</p>
+                            <a href="/az/news-content/velocity-balansinizi-milli-on-ila-artira-bilarsiniz-132" class="card__button">Tamamını oxu</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./public/assets/images/card/unnamed-1dnsda.jpg" alt="Velocity balansınızı Milli Ön ilə artıra bilərsiniz !!!">
+                        <div class="card__body">
+                            <a href="">
+                                <h5 class="card__title">Türkiyədən Azərbaycana Kosmetika Sifarişi</h5>
+                            </a>
+                            <p class="card__date">05.08.2021</p>
+                            <a href="/az/news-content/velocity-balansinizi-milli-on-ila-artira-bilarsiniz-132" class="card__button">Tamamını oxu</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./public/assets/images/card/saytkicikoolcuuu.jpg" alt="Velocity balansınızı Milli Ön ilə artıra bilərsiniz !!!">
+                        <div class="card__body">
+                            <a href="">
+                                <h5 class="card__title">LC Waikiki-dən Azərbaycana Sifariş və Çatdırılma</h5>
+                            </a>
+                            <p class="card__date">04.08.2021</p>
+                            <a href="/az/news-content/velocity-balansinizi-milli-on-ila-artira-bilarsiniz-132" class="card__button">Tamamını oxu</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="card__btn btn btn--primary-dark btn--primary-dark--large mt-5">Hamısına bax</a>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h2 class="heading__title heading__title--footer">Kömək lazımdır?</h2>
+                    <ul>
+                        <li class="footer__list">
+                            <i class="icon-map-marker_two_tone footer__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                            <a href="" class="footer__link">Bakı şəh.,AZ1072, Nərimanov rayonu Koroğlu Rəhimov küçəsi   Gəncə şəhəri Həsən Əliyev pr.75</a>
+                        </li>
+                        <li class="footer__list">
+                            <i class="icon-email_two_tone footer__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>  
+                            <a href="" class="footer__link">info@velocity.az</a>
+                        </li>
+                        <li class="footer__list">
+                            <i class="icon-phone_two_tone footer__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>                            
+                            <a href="" class="footer__link">+994123108707</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <ul class="footer__nav">
+                        <li class="footer__nav__item"><a href="" class="footer__nav__link">Daşınmasına icazə yoxdur</a></li>
+                        <li class="footer__nav__item"><a href="" class="footer__nav__link">Tez-tez verilən suallar</a></li>
+                        <li class="footer__nav__item"><a href="" class="footer__nav__link">Gizlilik siyasəti</a></li>
+                        <li class="footer__nav__item"><a href="" class="footer__nav__link">İstifadəçi razılaşması</a></li>
+                        <li class="footer__nav__item"><a href="" class="footer__nav__link">Sifariş et qaydaları</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>
+                    <img src="./public/assets/icons/logo-white.svg" alt="">
+                    <p class="footer__copyright">© 2021 Velocity LTD. Bütün hüquqlar qorunur</p>
+                </div>
+                <div class="footer__social">
+                    <a href="" class="footer__social__link">
+                        <i class="icon-facebook footer__social__icon"  ></i>
+                    </a>
+                    <a href="" class="footer__social__link">
+                        <i class="icon-instagram footer__social__icon"></i>
+                    </a>
+                    <a href="" class="footer__social__link">
+                        <i class="icon-youtube footer__social__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./public/assets/flickity/flickity.min.js"></script>
     <script src="./public/assets/js/main.js"></script>

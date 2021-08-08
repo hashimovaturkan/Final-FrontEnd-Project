@@ -2,3 +2,282 @@
     margin-top: 4rem;
     margin-bottom: 8.8rem;
 }
+.work{
+  margin-bottom: 8.8rem;
+  &__wrapper{
+    background-color: transparent;
+    display: flex;
+    gap: 2.4rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+  }
+  &__box{
+    width: 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
+.tariffs{
+  margin-bottom: 8.8rem;
+  padding: 4.8rem 4.8rem 8.8rem;
+  background-color: $black-dark-mode-v2;
+  border-radius: $border-radius;
+  box-shadow:$shadow;
+  
+}
+
+.shops{
+  margin-bottom: 8.8rem;
+  .__btn{
+    display: none;
+  }
+}
+
+.news{
+  margin-bottom: 8.8rem;
+  padding: 6.4rem;
+  background-image: url("../icons/Vector-news.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: $black-dark-mode-v2;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  &__main{
+    max-width: 36rem;
+    width: 36rem;
+  }
+  &__inner{
+    display: flex;
+  }
+  &__cards{
+    margin-left: 4rem;
+  }
+}
+
+//media query
+@media screen and (max-width: 1200px) {
+  .header__user-account__text{
+    display: none;
+  }
+  .header__list-item{
+    margin-right: 0.6rem;
+  }
+  .tabs__adjacent{
+    padding: 1.5rem 2.8rem;
+  }
+  .tariff__price{
+    &:not(:first-child){
+      margin-left: 8rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .menu__btn{
+    display: inline-block;
+    cursor: pointer;
+  }
+  // .header__top-info{
+
+  // }
+  .news__inner{
+    flex-direction: column;
+  }
+  .news__main{
+    white-space: nowrap;
+    &__btn{
+      display: none;
+    }
+  }
+  .news__cards{
+    margin-left: 0;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .card{
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    &:not(:last-child){
+      margin-bottom: 0%;
+    }
+    &__body{
+      padding: 16px 16px 24px;
+      margin: 0%;
+      
+    }
+    &__date{
+      margin-bottom: 24px;
+    }
+    &__button{
+      margin-top: 28px;
+
+    }
+    &::after{
+      display: none;
+    }
+    &__btn{
+      display: inline-block;
+    }
+  }
+
+  .heading--news{
+    margin-bottom: 45px;
+  }
+
+  .tabs__adjacent{
+    padding: 1.5rem 8rem;
+  }
+  .tariff__icon{
+    padding: 9px;
+  }
+  .tariff__title{
+    font-size: 18px;
+    margin-left: 16px;
+  }
+  .tariff__price{
+    &:not(:first-child){
+      margin-left: 3.5rem;
+    }
+  }
+  .header__nav{
+    display: none;
+  }
+  .header__currency{
+    display: none;
+  }
+  .carousel__text{
+    font-size: 3.5rem;
+  }
+  .carousel__img{
+    position: static;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .carousel__content{
+    padding: 30px 50px;
+    padding-bottom: 0;
+  }
+  .carousel .btn--primary-light--little{
+    display: none;
+  }
+  .carousel__desc{
+    margin-bottom: 0%;
+  }
+  .carousel__btn{
+    display: inline-block;
+  }
+  .btn--primary-light--large{
+    width: 83%;
+  }
+  .calculator{
+    padding: 50px;
+  }
+  
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .btn--primary-light--large{
+    width: 80%;
+  }
+  .tabs__adjacent{
+    padding: 1.5rem 5rem;
+  }
+  .calculator{
+    padding: 30px;
+  }
+  .shops__btn--large{
+    display: flex;
+  }
+  .shops__btn--little{
+    display: none;
+  }
+  .shops .heading--btwn{
+    margin-bottom: 0.8rem;
+  }
+  .tariff__tabs-text{
+    display: none;
+  }
+  .tabs__separate{
+    min-width: auto;
+  }
+  .heading__title{
+    font-size: 35px;
+  }
+  .tariff{
+    flex-direction: column;
+    align-items: start;
+  }
+  .tariff__category{
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .calculator__btn{
+    width: 100%;
+  }
+  .header__top{
+    display: none;
+  }
+  .slider{
+    margin-top: 0%;
+  }
+  .menu__btn{
+    margin-right: 16px;
+  }
+  .header__bottom{
+    margin-top: 0%;
+    padding: 16px;
+    height: 64px;
+  }
+  .header__cart--little{
+    display: flex;
+  }
+  .header__cart--bigger{
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 576px) {
+  .tabs__adjacent{
+    padding: 1.5rem 3.5rem;
+  }
+  .tariff__head{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tariff__title{
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .heading__title{
+    font-size: 2.5rem;
+  }
+  .heading--btwn{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3.2rem;
+  }
+  .tariffs{
+    padding: 32px 16px 40px ;
+  }
+
+}
+
+
+

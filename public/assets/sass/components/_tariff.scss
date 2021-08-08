@@ -1,0 +1,56 @@
+.tariff{
+    padding: 2.1rem 5.5rem 2.1rem 3.1rem;
+    @include flexbox(space-between);
+    border: 1px solid rgba($white,0.5);
+    border-radius: $border-radius;
+    background-color: $black-dark-mode-v2;
+    &:not(:last-child){
+        margin-bottom: 0.8rem;
+    }
+    &__icon{
+        background-color: $black-dark-mode;
+        box-shadow: $shadow;
+        border-color: transparent;
+        transition: all 0.3s ease 0s;
+        width: min-content;
+        padding: 17px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+    &__head{
+        @include flexbox;
+    }
+    &__title{
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $white;
+        margin-left: 3.2rem;
+        margin-right: 1.4rem;
+    }
+    &__category{
+        @include flexbox;
+    }
+    &__price{
+        &:not(:first-child){
+            margin-left: 16rem;
+        }
+    }
+    &__class{
+        font-weight: $fw-medium;
+        font-size: 1.4rem;
+        color: $brand-color-light;
+        line-height: 2.4rem;
+    }
+    &__amount{
+        font-weight: $fw-bold;
+        line-height: 2.4rem;
+        color: $white;
+    }
+    &:hover{
+        border-color: $brand-color-light;
+    }
+    &__old-amount{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}

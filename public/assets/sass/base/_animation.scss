@@ -1,0 +1,59 @@
+//currency
+@keyframes moveCurrent-1 {
+    0%{
+        opacity: 1;
+        top: 0;
+    }
+    10%{
+        opacity: 1;
+        top: -100%;
+    }
+    11%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        top: 100%;
+    }
+    51%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+        top: 0%;
+    }
+    100%{
+        opacity: 1;
+        top: 0%;
+    }
+
+}
+
+@keyframes moveCurrent-2 {
+    0%{
+        opacity: 1;
+        top: 100%;
+    }
+    10%{
+        opacity: 1;
+        top: 0%;
+    }
+    50%{
+        opacity: 1;
+        top: 0%;
+    }
+    60%{
+        opacity: 1;
+        top: -100%;
+    }
+    61%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        top: 100%;
+    }
+
+    
+
+}

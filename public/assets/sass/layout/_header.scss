@@ -29,6 +29,31 @@
     &__currency{
         margin-right: 3rem;
         color: $hdr-top-text-clr;
+        width: 150px;
+        height: 25px;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 23px;
+        position: relative;
+    }
+    &__current-item{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 100%;
+        margin-left: 0 !important;
+        opacity: 0;
+        transition: none !important;
+        animation-iteration-count: infinite !important;
+        &--animation-1{
+            animation: moveCurrent-1 8s ease-out;
+        }
+        &--animation-2{
+            animation: moveCurrent-2 8s ease-out;
+        }
+        
     }
 
     &__phone{
@@ -54,17 +79,50 @@
         padding: 1.6rem;
         white-space: nowrap;
         text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+        &__list{
+            width: 100%;
+            z-index: 3;
+            position: absolute;
+            left: 0%;
+            top: 90%;
+            background-color: $black-dark-mode;
+            border-bottom-left-radius: 0.8rem;
+            border-bottom-right-radius: 0.8rem;
+            box-shadow: 0 0 0 1px rgba(68, 68, 68 , 0.11);
+            
+        }
+        &__list-item{
+            &:first-child a{
+                margin-top: 0.7rem;
+            }
+            &:last-child a{
+                margin-bottom: 0.7rem;
+            }
+        }
         &__item-link{
+            display: inline-block;
             text-transform: uppercase;
+            padding: 0.8rem 1.6rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #fff;
+            cursor: pointer;
+            width: 100%;
+            &:hover{
+                background-color: rgba(240,244,240,0.05);
+                color: $white;
+            }
         }
         &__current{
-            cursor: pointer;
             font-weight: 500;
             color: $hdr-top-text-clr;
             &::after{
                content: '';
                display: inline-block;
-               border: 2px solid $white-pale;
+               border: 0.2rem solid $white-pale;
                border-left: none;
                border-top: none;
                width: 1rem;
@@ -138,11 +196,18 @@
             color: $brand-color-light;
         }
     }
+    &__hidden{
+        @include flexbox;
+    }
     &__cart{
         @include flexbox;
         margin-left: 3.2rem;
         margin-right: 2rem;
         position: relative;
+        &--little{
+            margin: 0%;
+            display: none;
+        }
         &__count{
             position: absolute;
             background-color: $red;

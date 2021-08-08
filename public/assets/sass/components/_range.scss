@@ -21,13 +21,16 @@
         @include flexbox
     }
     &__measure{
+        cursor: pointer;
         line-height: 2.4rem;
         font-weight: $fw-medium;
         color: $white;
         width: 9.6rem;
         border-left: 1px solid $white-pale;
+        position: relative;
     }
     &__active{
+        cursor: pointer;
         padding-left: 1.6rem;
         position: relative;
         &::after{
@@ -70,5 +73,31 @@
             border: none;
             background: transparent;
         }
+    }
+    &__dropdown{
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        background-color: $black-dark-mode;
+        top: 160%;
+        box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.1);
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        &__link{
+            display: inline-block;
+            width: 100%;
+            padding: 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
+            cursor: pointer;
+            &:hover{
+                color: $white;
+                background-color: rgba(240,244,240,0.05);;
+            }
+        }
+        
     }
 }

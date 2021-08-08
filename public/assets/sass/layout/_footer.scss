@@ -1,0 +1,61 @@
+.footer{
+    background-color: #181C1F;
+    padding-top: 5.6rem;
+    padding-bottom: 6.4rem;
+    &__list{
+        &:not(:last-child){
+            margin-bottom: 2.4rem;
+        }
+        @include flexbox(flex-start);
+        line-height: 2.4rem;
+        
+    }
+    &__link{
+        font-weight: 500;
+        line-height: 2.4rem;
+        margin-left: 2.4rem;
+        color: $white;
+        &:hover{
+            color: $brand-color-light;
+        }
+    }
+    &__icon{
+        color: $brand-color-light;
+        font-size: 3.6rem;
+    }
+    &__nav{
+        margin-top: 2.4rem;
+        margin-bottom: 3.2rem;
+        &__item{
+            line-height: 5.6rem;
+            font-weight: 500;
+        }
+        &__link{
+            color: $white;
+            &:hover{
+                color: $brand-color-light;
+            }
+        }
+    }
+    &__bottom{
+        @include flexbox(space-between);
+        padding-top: 4rem;
+        border-top: 0.1rem solid $line-color;
+    }
+    &__copyright{
+        margin-top:0.8rem;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: rgba($white,0.8);
+    }
+    &__social{
+        height: 2.4rem;
+        &__link{
+            margin-right: 4rem ;
+        }
+        &__icon{
+            font-size: 2.4rem;
+            color: rgba($white,0.8);
+        }
+    }
+}

@@ -10,6 +10,12 @@
         &:not(:first-child){
             margin-left: 0.8rem;
         }
+        &--isActive{
+            background-color: #22252C;
+            box-shadow: $shadow;
+            border-color: transparent ;
+            color: $brand-color-light;
+        }
     }
     &__text{
         display: inline-block;

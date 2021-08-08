@@ -19,13 +19,13 @@ $wooden: #B38B6D;
 $black-dark-mode: #22252C;
 $black-dark-mode-v2: #3B4046;
 $warning: #FFB47D;
+$black-dark:#000;
 
 $gradient-color: radial-gradient(109.88% 109.88% at 50% 52.82%, #3B4046 0%, #22252C 100%);
-$line-color: rgba($white, .2);
-$hdr-top-text-clr: rgba($white, .7); //header top color 
+$line-color: rgba(#fff, .2);
+$hdr-top-text-clr: rgba(#fff, .7); //header top color 
 $shadow: 0px 4px 24px rgba(24, 28, 31, 0.2);
-
-$border-radius: 8px;
+$border-radius: 0.8rem;
 
 $carousel-dots:rgba(201,255,199,0.2);
 

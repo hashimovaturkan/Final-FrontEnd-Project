@@ -1,0 +1,46 @@
+.box{
+    box-shadow: $shadow;
+    border: 1px solid $brand-color-light;
+    transition: all 0.3s ease 0s;
+    padding: 31px;
+    border-radius: $border-radius;
+    background-color: $black-dark-mode-v2;
+    display: flex;
+    flex-direction: column;
+    &__icon{
+        width: min-content;
+        padding: 1.7rem;
+        border: 0.1rem solid $border-color;
+        border-radius: 8px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        margin-bottom: 3.2rem;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        font-weight: 600;
+        white-space: nowrap;
+        font-size: 2.4rem;
+        line-height: 4rem;
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: $white-pale;
+        margin-bottom: 4.8rem;
+        max-height: 7.2rem;
+    }
+    &:hover{
+        border: 1px solid $black-dark;
+    }
+    &:hover .box__icon{
+        background-color: $black-dark-mode;
+    }
+}
+
