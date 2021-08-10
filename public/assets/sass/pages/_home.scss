@@ -31,7 +31,7 @@
 
 .shops{
   margin-bottom: 8.8rem;
-  .__btn{
+  &__btn--large{
     display: none;
   }
 }
@@ -57,6 +57,11 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header__hidden{
+    display: none;
+  }
+}
 //media query
 @media screen and (max-width: 1200px) {
   .header__user-account__text{
@@ -73,17 +78,23 @@
       margin-left: 8rem;
     }
   }
-
+  .header__hidden{
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 992px) {
+  .box{
+    padding: 2.4rem 2rem 3.2rem;
+  }
   .menu__btn{
     display: inline-block;
     cursor: pointer;
   }
-  // .header__top-info{
-
-  // }
+  .header__hidden{
+    display: flex;
+  }
   .news__inner{
     flex-direction: column;
   }

@@ -1,0 +1,18 @@
+.privacy{
+    &__content{
+        padding: 4.7rem 4.8rem 4.9rem;
+        background-color: $black-dark-mode-v2;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        margin-bottom: 8.8rem;
+        font-size: 1.8rem !important;
+        line-height: 3.2rem !important;
+        background-image: url("../icons/Vector-about.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        & li{
+            list-style: disc;
+        }
+    }
+}

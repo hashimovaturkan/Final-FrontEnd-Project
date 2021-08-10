@@ -103,8 +103,106 @@ mediaQueryMd.addEventListener( "change", (e) => {
 })
 
 
+//FAQ PAGE
+const faqButtons = document.querySelectorAll(".accordion__btn");
+
+faqButtons.forEach((btn)=>{
+    btn.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        const collapse = document.querySelector(`[data-collapse=${btn.getAttribute("data-btn")}]`);
+        faqButtons.forEach((active)=>{
+            if(active!==btn){
+                const activeCollapse = document.querySelector(`[data-collapse=${active.getAttribute("data-btn")}]`);
+                activeCollapse.classList.add("h-0");
+            }
+        })
+        collapse.classList.toggle("h-0");
+    })
+})
+
+//TARIFF PAGE
+const tabsCountryTariffsPage = document.querySelectorAll(".tariffs-page .tabs__separate");
+tabsCountryTariffsPage.forEach((tab)=>{
+    tab.addEventListener("click",()=>{
+        tabsCountryTariffsPage.forEach((activeTab)=>{
+            activeTab.classList.remove("tabs__separate--isActiveTariffs");
+        })
+        tab.classList.add("tabs__separate--isActiveTariffs");
+    })
+})
 
 
+//signup
+const tabsChooseSignUp = document.querySelectorAll(".signup .tabs__adjacent");
+tabsChooseSignUp.forEach((tab)=>{
+    tab.addEventListener("click",()=>{
+        tabsChooseSignUp.forEach((activeTab)=>{
+            activeTab.classList.remove("tabs__adjacent--isActive");
+        })
+        tab.classList.add("tabs__adjacent--isActive");
+    })
+})
+
+//form
+const inputs = document.querySelectorAll(".form__input");
+
+
+inputs.forEach((input)=>{
+    const label = input.nextElementSibling;
+    const warning = label.nextElementSibling;
+    const formIcon = input.previousElementSibling;
+        formIcon?.addEventListener("click",()=>{
+            if(input.getAttribute("type")==="text"){
+                input.setAttribute("type","password");
+            }
+            else{
+                input.setAttribute("type","text");
+            }
+        })
+        input.addEventListener("focusin",(e)=>{
+            input.style.paddingBottom = "0";
+            label.style.left="17px";
+            label.style.top="4px";
+            label.style.fontSize="14px";
+            label.style.color="rgba(white, .2)";
+        })
+        input.addEventListener("focusout",(e)=>{
+            input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="16px";
+                label.style.fontSize="16px";
+                label.style.color="rgba(white, .3)";
+        })
+    input.addEventListener("input",(event)=>{
+        input.addEventListener("focusout",(e)=>{
+            if(event.target.value){
+                input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="4px";
+                label.style.fontSize="14px";
+                label.style.color="rgba(white, .2)";
+                warning?.classList.add("d-none");
+                
+            }
+            else{
+                input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="16px";
+                label.style.fontSize="16px";
+                label.style.color="rgba(white, .3)";
+                warning?.classList.remove("d-none");
+            }
+            
+        });
+
+        
+
+        
+        
+    })
+})
  
+
+
 
 

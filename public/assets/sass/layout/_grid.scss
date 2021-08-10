@@ -1,0 +1,17 @@
+.container-pages{
+    width: 960px;
+    max-width: 960px;
+    margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .container-pages{
+        width: 85%
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .container-pages{
+        width: 90%;
+    } 
+}

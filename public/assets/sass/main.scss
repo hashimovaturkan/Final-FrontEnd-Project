@@ -24,8 +24,16 @@
 @import './components/tariff';
 @import './components/card';
 @import './components/menu';
+@import './components/accordion';
 
+@import './layout/grid';
 @import './layout/header';
 @import './layout/footer';
+@import './layout/forms';
+@import './layout/aside';
 
 @import './pages/home';
+@import './pages/privacy';
+@import './pages/about';
+@import './pages/services';
+@import './pages/signup';

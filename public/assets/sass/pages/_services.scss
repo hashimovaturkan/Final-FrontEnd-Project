@@ -1,0 +1,22 @@
+.services{
+    padding: 4.8rem 3.2rem 3.4rem;
+    background-color: $black-dark-mode-v2;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    &__content{
+        margin-top: 5.6rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading__text--bigger{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .services .box__title{
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+
+}

@@ -56,6 +56,23 @@
         &__icon{
             font-size: 2.4rem;
             color: rgba($white,0.8);
+            &:hover{
+                color: $brand-color-light;
+            }
         }
     }
+    &__hidden{
+        display: none;
+    }
 }
+
+
+@media screen and (max-width: 768px) {
+    .footer__hidden{
+        display: inline-block;
+    }
+    .footer__bottom .footer__social{
+        display: none;
+    }
+  
+  }

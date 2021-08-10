@@ -7,6 +7,7 @@
     background-color: $black-dark-mode-v2;
     display: flex;
     flex-direction: column;
+    
     &__icon{
         width: min-content;
         padding: 1.7rem;
@@ -15,6 +16,15 @@
         display: inline-block;
         transition: all 0.3s ease 0s;
         margin-bottom: 3.2rem;
+        &--little{
+            width: 7.2rem;
+            height: 7.2rem;
+            margin-bottom: 2.4rem;
+            padding: 1.1rem;
+            background-color: $black-dark-mode;
+            box-shadow: $shadow;
+            border: none;
+        }
     }
     &__body{
         display: flex;
@@ -27,6 +37,14 @@
         line-height: 4rem;
         color: #fff;
         margin-bottom: 0.8rem;
+        &--bigger{
+            transition: all 0.3s ease 0s;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        &:hover{
+            color: $brand-color-light;
+        }
     }
     &__text{
         font-weight: 400;
@@ -35,12 +53,44 @@
         color: $white-pale;
         margin-bottom: 4.8rem;
         max-height: 7.2rem;
+        &--bigger{
+            transition: all 0.3s ease 0s;
+            font-size: 1.8rem !important;
+            line-height: 3.2rem !important;
+            margin-bottom: 4.8rem;
+            min-height: 15rem;
+        }
+        
+        &--ellipse{
+            transition: all 0.3s ease 0s;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 0;
+            max-height: 0%;
+        }
     }
     &:hover{
         border: 1px solid $black-dark;
     }
     &:hover .box__icon{
         background-color: $black-dark-mode;
+    }
+    &--large{
+        transition: all 0.3s ease 0s;
+        padding-bottom: 4rem;
+        border-color: $white-pale;
+        &:hover{
+            border: 1px solid $brand-color-light;
+        }
+        &:hover a{
+            color:  $brand-color-light;
+        }
+        &:hover p{
+            color: $white;
+        }
     }
 }
 

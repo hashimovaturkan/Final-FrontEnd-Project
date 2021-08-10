@@ -1,0 +1,37 @@
+.about{
+    &__content{
+        background-image: url("../icons/Vector-about.svg");
+        padding: 4.8rem 4.8rem 8.4rem;
+        background-color: $black-dark-mode-v2;
+        border-radius: $border-radius;
+        box-shadow:$shadow;
+        background-repeat: no-repeat;
+        max-width: 72rem;
+        background-position-x: -13rem;
+    }
+    &__content-text{
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+    }
+    &__img-box{
+        max-width: 72rem;
+        position: relative;
+        margin-left: auto;
+        margin-top: -25.6rem;
+        z-index: -1;
+    }
+    &__img{
+        border-radius: $border-radius;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about__img-box{
+        margin-top: 0;
+    }
+    .box__text--bigger{
+        font-size: 1.6rem !important;
+        line-height: 2.4rem !important;
+    }
+}

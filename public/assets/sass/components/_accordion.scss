@@ -1,0 +1,52 @@
+.accordion{
+    &__item{
+        margin-bottom:0.8rem;
+    }
+    &__btn{
+        padding: 2rem 2.4rem;
+        background-color: $black-dark-mode-v2;
+        color: $white;
+        border-radius: $border-radius;
+        @include flexbox(space-between);
+        cursor: pointer;
+        width: 100%;
+        transition: color .15s ease-in-out,
+                    background-color .15s ease-in-out,
+                    border-color .15s ease-in-out,
+                    box-shadow .15s ease-in-out,
+                    border-radius .15s ease,
+                    height .15s ease;
+        &:hover{
+            color: $white;
+        }
+    }
+    &__txt{
+        font-size: 1.6rem;
+        
+    }
+    &__collapse{
+        overflow: hidden;
+        transition:height 1s;
+    }
+    &__body{
+        transition: 1s all;
+        overflow: hidden;
+        outline-color: #fff;
+        padding: 2rem 2.4rem 5.8rem;
+        line-height: 2.6rem;
+        margin-top: 0.8rem;
+        background-color: $black-dark-mode-v2;
+        border-radius: $border-radius;
+        border: 1px solid $brand-color-light;
+        &__header{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__txt{
+            color: #C9FFC7;
+            margin-bottom: 4.4rem;
+            font-size: 1.8rem;
+            line-height: 3.2rem;
+        }
+    }
+}
