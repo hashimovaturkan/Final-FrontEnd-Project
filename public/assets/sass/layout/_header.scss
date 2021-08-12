@@ -232,4 +232,83 @@
 
 }
 
+@media (max-width: 1399.98px) { 
+    .header__hidden{
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) { 
+    .header__user-account__text{
+        display: none;
+      }
+    .header__list-item{
+    margin-right: 0.6rem;
+    }
+}
+
+@media (max-width: 991.98px) { 
+    .header__hidden{
+        display: flex;
+    }
+    .heading--news{
+        margin-bottom: 45px;
+      }
+    .header__nav{
+    display: none;
+    }
+    .header__currency{
+    display: none;
+    }
+    .menu__btn{
+        display: inline-block;
+        cursor: pointer;
+      }
+}
+
+@media (max-width: 767.98px) { 
+    .heading__title{
+        font-size: 35px;
+      }
+      .heading__text--bigger{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+      .header__top{
+        display: none;
+      }
+      .header__bottom{
+        margin-top: 0%;
+        padding: 16px;
+        height: 64px;
+      }
+      .header__cart--little{
+        display: flex;
+      }
+      .header__cart--bigger{
+        display: none;
+      }
+      .menu__btn{
+        margin-right: 16px;
+      }
+}
+
+@media (max-width: 575.98px) { 
+    .heading__title{
+        font-size: 2.5rem;
+      }
+    .heading--btwn{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3.2rem;
+    }
+}
+
+
+
+
+
+
+
+
   

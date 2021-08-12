@@ -7,30 +7,3 @@
 }
 
 
-@media screen and (max-width: 1200px) {
-    .aside--login{
-        width: 328px;
-    }
-    .form--signin{
-        padding-left: 0;
-        width: calc(100% - 32.8rem);
-        padding-right: 0;
-    }
-    
-}
-
-@media screen and (max-width: 992px) {
-    .aside--login{
-        padding: 3.2rem !important;
-        background-image: none;
-        margin-right: 0 !important;
-        margin-top: 6.4rem;
-        width: 100% !important;
-    }
-    .form--signin{
-        width: 100% !important;
-        margin: 0 !important;
-        order: -1;
-    }
-    
-}

@@ -119,14 +119,14 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1199.98px) { 
     .shops-page__side{
         margin-right: 32px;
         width: 33rem;
     }
-
 }
-@media screen and (max-width: 992px) {
+
+@media (max-width: 991.98px) {
     .shops-page__inner{
         flex-direction: column;
     }

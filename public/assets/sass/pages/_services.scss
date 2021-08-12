@@ -9,14 +9,10 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .heading__text--bigger{
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-    }
+@media (max-width: 767.98px) { 
     .services .box__title{
         font-size: 2rem;
         line-height: 3.2rem;
     }
-
+  
 }

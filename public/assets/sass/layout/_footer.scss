@@ -67,12 +67,12 @@
 }
 
 
-@media screen and (max-width: 768px) {
+
+@media (max-width: 767.98px) { 
     .footer__hidden{
         display: inline-block;
     }
     .footer__bottom .footer__social{
         display: none;
     }
-  
-  }
+}

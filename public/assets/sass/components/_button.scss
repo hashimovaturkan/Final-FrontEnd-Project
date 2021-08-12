@@ -93,3 +93,25 @@
     
     
 }
+
+
+@media (max-width: 991.98px) { 
+    .btn--primary-light--large{
+        width: 83%;
+      }
+      .btn--registration{
+        width: auto;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media (max-width: 767.98px) { 
+    .btn--primary-light--large{
+        width: 80%;
+      }
+      .btn--registration{
+        margin-bottom: 3.2rem;
+    }
+
+}

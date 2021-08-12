@@ -94,3 +94,13 @@
     }
 }
 
+@media (max-width: 991.98px) { 
+    .box{
+        padding: 2.4rem 2rem 3.2rem;
+      }
+      .box__text--bigger{
+        font-size: 1.6rem !important;
+        line-height: 2.4rem !important;
+    }
+}
+

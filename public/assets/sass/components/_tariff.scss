@@ -54,3 +54,66 @@
         line-height: 2.4rem;
     }
 }
+
+
+
+@media (max-width: 1199.98px) { 
+    .tariff__price{
+        &:not(:first-child){
+          margin-left: 8rem;
+        }
+      }
+}
+
+@media (max-width: 991.98px) { 
+    .tariff__icon{
+        padding: 9px;
+    }
+    .tariff__title{
+    font-size: 18px;
+    margin-left: 16px;
+    }
+    .tariff__price{
+    &:not(:first-child){
+        margin-left: 3.5rem;
+    }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tariff__tabs-text{
+        display: none;
+    }
+    .tariff{
+        flex-direction: column;
+        align-items: start;
+    }
+    .tariff__category{
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 8px;
+    }
+ }
+
+@media (max-width: 575.98px) {
+    .tariff__head{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tariff__title{
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    .tariffs{
+        padding: 32px 16px 40px ;
+    }
+ }
+
+
+
+
+
+
+

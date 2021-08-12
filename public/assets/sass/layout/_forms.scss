@@ -93,3 +93,24 @@
     }
 }
 
+
+@media (max-width: 1199.98px) { 
+    .form--signin{
+        padding-left: 0;
+        width: calc(100% - 32.8rem);
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .form--signin{
+        width: 100% !important;
+        margin: 0 !important;
+        order: -1;
+    }
+    .form--signup{
+        width: 100%;
+        padding: 0%;
+      }
+}

@@ -85,3 +85,30 @@
     width: 32px;
     background-color: $brand-color-light;
   }
+
+
+@media (max-width: 991.98px) { 
+    .carousel__text{
+        font-size: 3.5rem;
+      }
+      .carousel__img{
+        position: static;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+      .carousel__content{
+        padding: 30px 50px;
+        padding-bottom: 0;
+      }
+      .carousel .btn--primary-light--little{
+        display: none;
+      }
+      .carousel__desc{
+        margin-bottom: 0%;
+      }
+      .carousel__btn{
+        display: inline-block;
+      }
+}

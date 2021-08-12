@@ -15,20 +15,28 @@
     }
 }
 
-@media screen and (max-width: 992px) {
-    .aside{
-      width: 100%;
-      height:auto;
-      padding: 3.2rem;
-      background-image: none;
-      margin-top: 6.4rem;
-    }
-    .btn--registration{
-        width: auto;
-        margin-left: 0%;
-        margin-right: 0%;
-    }
 
-    
+
+@media (max-width: 1199.98px) { 
+    .aside--login{
+        width: 328px;
+    }
 }
 
+
+@media (max-width: 991.98px) {
+    .aside--login{
+        padding: 3.2rem !important;
+        background-image: none;
+        margin-right: 0 !important;
+        margin-top: 6.4rem;
+        width: 100% !important;
+    }
+    .aside{
+        width: 100%;
+        height:auto;
+        padding: 3.2rem;
+        background-image: none;
+        margin-top: 6.4rem;
+      }
+}
