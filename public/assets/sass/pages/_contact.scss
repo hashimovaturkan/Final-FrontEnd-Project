@@ -1,0 +1,73 @@
+.contact{
+    &__content{
+        display: flex;
+        gap: 3.2rem;
+    }
+    &__part{
+        padding: 3.1rem 3.1rem 4.7rem;
+        flex: 1;
+        background-color: $black-dark-mode-v2;
+        border-radius:$border-radius;
+        box-shadow: $shadow;
+    }
+    &__title{
+        font-weight: 600;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        color: $white;
+    }
+    &__list{
+        margin-bottom: 5.5rem;
+    }
+    &__list-item{
+        @include flexbox(flex-start);
+        margin-bottom: 4rem;
+    }
+    &__address{
+        color: #FFE249;
+    }
+    &__time{
+        color: $brand-color-light;
+    }
+    &__mail{
+        color: #FFBC7E;
+    }
+    &__icon{
+        margin-right: 2.4rem;
+        font-size: 3.6rem;
+        width: min-content;
+        padding: 1.7rem;
+        border: 0.1rem solid $line-color;
+        border-radius: $border-radius;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+    }
+    &__desc-title{
+        font-weight: 700;
+        line-height: 2.8rem;
+        color: $white;
+        font-size: 1.6rem;
+    }
+    &__desc{
+        font-size: 1.4rem ;
+        line-height: 2.4rem ;
+    }
+    &__social-icon{
+        margin-right: 3.2rem;
+        font-size: 3rem;
+    }
+    &__text{
+        margin-bottom: 3.8rem;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .contact__content{
+        flex-direction: column;
+    }
+    
+}

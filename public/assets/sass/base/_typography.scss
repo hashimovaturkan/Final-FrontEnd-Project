@@ -36,6 +36,9 @@ body{
         margin-bottom: 0.8rem;
         font-size: 4rem;
         line-height: 5.6rem;
+        &--dark{
+            color: $black;
+        }
         &--footer{
             margin-bottom: 4rem;
         }
@@ -54,6 +57,11 @@ body{
         }
         &--tariffs{
             max-width: 680px;
+        }
+        &--innovations{
+            max-width: 68rem;
+            font-size: 1.8rem;
+            line-height: 3.2rem;
         }
     }
     &--btwn{

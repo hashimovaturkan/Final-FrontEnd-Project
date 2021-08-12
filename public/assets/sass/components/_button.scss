@@ -13,6 +13,17 @@
     min-width: 144px;
     padding: 1.6rem 3.2rem;
     border-radius: $border-radius;
+    &--transparent{
+        padding: 1.4rem 0;
+        border: 2px solid $black;
+        border-radius: $border-radius;
+        width: 100% ;
+        font-weight: 500;
+        &:hover{
+            background-color: rgba($white,0.11);
+            color: $black;
+        }
+    }
     &--primary-light{
         background-color: $brand-color-light;
         &:hover{

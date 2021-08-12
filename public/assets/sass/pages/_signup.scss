@@ -5,3 +5,40 @@
     border-radius: $border-radius;
     box-shadow: $shadow;
 }
+
+@media screen and (max-width: 992px) {
+    .signup{
+      flex-direction: column;
+    }
+    .form--signup{
+        width: 100%;
+        padding: 0%;
+      }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .order__item-1{
+        order: 1;
+    }
+    .order__item-2{
+        order: 2;
+    }
+    .order__item-3{
+        order: 3;
+    }
+    .order__item-4{
+        order: 5;
+    }
+    .order__item-5{
+        order: 4;
+    }
+
+    .btn--registration{
+        margin-bottom: 3.2rem;
+    }
+    
+}
+
+

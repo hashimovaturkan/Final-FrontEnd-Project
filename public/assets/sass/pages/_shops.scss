@@ -1,0 +1,150 @@
+.shops-page{
+    &__sidebar{
+        position: fixed;
+        width: 100%;
+        z-index: 33333;
+        left: 100%;
+        background-color: #22252C;
+        padding: 20px 16px 16px;
+        overflow-y: scroll;
+        transition: .5s;
+        height: 100%;
+        bottom: 0;
+
+    }
+    &__tabs{
+        @include flexbox;
+    }
+    &__inner{
+        display: flex;
+    }
+    &__side{
+        width: 37rem;
+        max-width: 37rem;
+        padding: 3.2rem 1.6rem 4rem;
+        margin-right: 4.8rem;
+        height: fit-content;
+        height: -moz-fit-content;
+        background-color: $black-dark-mode-v2;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+    }
+    &__title{
+        color: #C9FFC7;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin-bottom: 2.4rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    &__list-item{
+        padding: 1.2rem 1.6rem;
+        display: flex;
+        border-radius: $border-radius;
+        &:not(:last-child){
+            margin-bottom: 0.8rem;
+        }
+        &--active{
+            background-color: $black-dark-mode;
+            & a {
+                color: #C9FFC7;
+            }
+        }
+        &:hover{
+            background-color: rgba(201,255,199,0.1);
+            border-radius: 0.4rem;
+            & a{
+                color: $brand-color-light;
+            }
+        }
+    }
+    &__list-link{
+        @include flexbox(flex-start);
+        width: 100%;
+        margin-left: 1.6rem;
+        transition: .1s;
+        color: $white;
+    }
+    &__brands{
+        width: calc(100% - 37rem);
+    }
+    &__link{
+        @include flexbox;
+        width: 17rem ;
+        height: 17rem ;
+        background: $white;
+        border-radius: $border-radius;
+        border: 0.1rem solid $black;
+    }
+    &__img{
+        max-width: 70%;
+        width: auto;
+        height: auto;
+        max-height: 17rem;
+        &:hover{
+            -moz-filter: grayscale(50%) opacity(60%);
+            -ms-filter: grayscale(50%) opacity(60%);
+            -o-filter: grayscale(50%) opacity(60%);
+            filter: grayscale(50%) opacity(60%);
+        }
+    }
+    &__structure{
+        display: flex;
+        gap: 1.4rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    &__menu{
+        @include flexbox(space-between);
+        padding: 0.6rem 1.6rem 1rem;
+        margin-bottom: 4rem;
+        background-color: $black-dark-mode-v2;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        & h6{
+            font-size: 1.6rem;
+        }
+    }
+    &__side-menu{
+        display: none;
+    }
+    &__title-menu{
+        @include flexbox(space-between);
+        margin-bottom: 3.2rem;
+        & h2{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .shops-page__side{
+        margin-right: 32px;
+        width: 33rem;
+    }
+
+}
+@media screen and (max-width: 992px) {
+    .shops-page__inner{
+        flex-direction: column;
+    }
+    .shops-page__side{
+        display: none;
+    }
+    .shops-page__brands{
+        width: 100%;
+    }
+    .shops-page__structure{
+        gap: 1.6rem;
+        justify-content: center;
+    }
+    .shops-page__side-menu{
+        display: inline-block;
+        width: 40rem;
+    }
+    .shops-page__title-menu{
+        margin-bottom: 5rem;
+    }
+
+}

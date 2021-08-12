@@ -1,0 +1,30 @@
+.pagination{
+    @include flexbox(flex-end);
+    margin-top: 5.6rem;
+    &__item{
+        &:not(:first-child){
+            margin-left: 0.8rem;
+        }
+    }
+    &__link{
+        display: inline-block;
+        background-color: $black-dark-mode-v2;
+        border-color: $brand-color-light;
+        color: $white;
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        border-radius: 8px !important;
+        text-align: center;
+        &--active{
+            border: 0.1rem solid $white;
+        }
+        &:hover{
+            color: $brand-color-light;
+        }
+        transition: color .15s ease-in-out,
+                    background-color .15s ease-in-out,
+                    border-color .15s ease-in-out,
+                    box-shadow .15s ease-in-out;
+    }
+}

@@ -1,0 +1,34 @@
+.aside{
+    @include flexbox;
+    padding: 0 4.8rem;
+    height: 83.4rem;
+    width: 32.8rem;
+    flex-direction: column;
+    background-color: $brand-color-light;
+    border-radius: 8px;
+    background-image: url("../icons/Vector-lighten.svg");
+    background-repeat: no-repeat;
+    &--login{
+        height: auto;
+        padding: 0 6.4rem;
+        width: 49.7rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .aside{
+      width: 100%;
+      height:auto;
+      padding: 3.2rem;
+      background-image: none;
+      margin-top: 6.4rem;
+    }
+    .btn--registration{
+        width: auto;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    
+}
+

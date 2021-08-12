@@ -20,6 +20,11 @@
         &:not(:first-child){
             margin-left: 0.8rem;
         }
+        &--shops{
+            min-width: 15.2rem;
+            padding: 1.5rem 2.7rem ;
+            display: flex;
+        }
         &--isActive{
             background-color: #22252C;
             box-shadow: $shadow;
@@ -49,6 +54,10 @@
             box-shadow: $shadow;
             border-radius: 0.8rem;
             color: $brand-color-light;
+            &--light{
+                background-color: $black-dark-mode-v2;
+            }
         }
+        
     }
 }

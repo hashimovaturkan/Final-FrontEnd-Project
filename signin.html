@@ -138,100 +138,45 @@
     </header>
     <div class="container">
         <section class="signup mb-88">
-            <form action="" method="POST" class="form--signup">
+            <aside class="aside aside--login">
+                <h2 class="heading__title heading__title--dark mb-24">Hələdə hesabınız yoxdur?</h2>
+                <a href="/signup.html" class="btn btn--transparent">Qeydiyyatdan keç</a>
+            </aside>
+            <form action="" method="POST" class="form--signin">
                 <div class="heading heading--center">
-                    <h2 class="heading__title">Qeydiyyatdan keç</h2>
-                    <p class="heading__text">Əgər hesabınız yoxdursa aşağıdakı məlumatları dolduraraq yeni hesab yaradın</p>
-                </div>
-                <div class="tabs tabs--fit">
-                    <div class="tabs__adjacent tabs__adjacent--isActive">Fiziki şəxs</div>
-                    <div class="tabs__adjacent ">Hüquqi şəxs</div>
+                    <h2 class="heading__title">Hesaba daxil ol!</h2>
+                    <p class="heading__text">Hesabınıza giriş etmək üçün zəhmət olmasa emailnizi və şifrənizi daxil edin!</p>
                 </div>
                 <div class="form__content">
-                    <div class="row order__item-1">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <input type="text" name="" id="form-item" class="form__input">
-                                <label class="form__placeholder" for="form-item" tabindex="0">Ad</label>
-                                <div class="form__helper d-none">Ad boş qoyula bilməz.</div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <input type="text" name="" id="form-item-2" class="form__input">
-                                <label class="form__placeholder" for="form-item-2" tabindex="0">Soyad</label>
-                                <div class="form__helper d-none">Soyad boş qoyula bilməz.</div>
-                            </div>
-                        </div>
+                    <div class="form__item mb-32">
+                        <input type="text" name="" id="form-item-3" class="form__input">
+                        <label class="form__placeholder" for="form-item-3" tabindex="0">Email</label>
+                        <div class="form__helper d-none">Email boş qoyula bilməz.</div>
                     </div>
-                    <div class="row order__item-2">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <input type="text" name="" id="form-item-3" class="form__input">
-                                <label class="form__placeholder" for="form-item-3" tabindex="0">Email</label>
-                                <div class="form__helper d-none">Email boş qoyula bilməz.</div>
-                            </div>
+                    <div class="form__item mb-32">
+                        <div class="form__icon-box">
+                            <i class="icon-eye_two_tone form__icon" id="togglePassword" ><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <input type="tel" name="" id="form-item-4" class="form__input">
-                                <label class="form__placeholder" for="form-item-4" tabindex="0">Mobil nömrə</label>
-                                <div class="form__helper d-none">Mobil nömrə boş qoyula bilməz.</div>
-                            </div>
-                        </div>
+                        <input type="password" name="" id="form-item-5" class="form__input">
+                        <label class="form__placeholder" for="form-item-5" tabindex="0">Şifrə</label>
+                        <div class="form__helper d-none">Şifrə boş qoyula bilməz.</div>
                     </div>
-                    <div class="row order__item-3">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <div class="form__icon-box">
-                                    <i class="icon-eye_two_tone form__icon" id="togglePassword" ><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                                </div>
-                                <input type="password" name="" id="form-item-5" class="form__input">
-                                <label class="form__placeholder" for="form-item-5" tabindex="0">Şifrə</label>
-                                <div class="form__helper d-none">Şifrə boş qoyula bilməz.</div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pb-32">
-                            <div class="form__item">
-                                <div class="form__icon-box">                               
-                                    <i class="icon-eye_two_tone form__icon" id="togglePassword"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                                </div>
-                                <input type="password" name="" id="form-item-6" class="form__input">
-                                <label class="form__placeholder" for="form-item-6" tabindex="1">Təkrar şifrə</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row order__item-4">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                            <label for="check-form" class="calculator__service-item">
-                                <input type="checkbox" class="calculator__input" name="service" id="check-form">
-                                <span class="calculator__custom-input">
-                                        <svg class="calculator__input-icon" witdh="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                          <path fill="none" stroke="#181C1F" stroke-width="7" d="M1.73 12.91l6.37 6.37L22.79 4.59"></path>
-                                        </svg>
-                                </span>
-                                <span><span class="form__highlight">İstifadəçi şərtləri</span> ilə razıyam</span>
-                            </label>
-                            <div class="form__helper form__important d-none">İstifadəçi razılaşmasını qəbul etmək vacibdir</div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                            <div class="form__video">
-                                <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                                <span class="form__video-text">Video təlimat</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row order__item-5">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                            <div class="btn btn--primary-light btn--registration mx-auto mt-40">Qeydiyyat</div>
-                        </div>
-                    </div>
+                    <label for="check-form" class="calculator__service-item">
+                        <input type="checkbox" class="calculator__input" name="service" id="check-form">
+                        <span class="calculator__custom-input">
+                                <svg class="calculator__input-icon" witdh="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                  <path fill="none" stroke="#181C1F" stroke-width="7" d="M1.73 12.91l6.37 6.37L22.79 4.59"></path>
+                                </svg>
+                        </span>
+                        <span>Məni yadda saxla</span>
+                    </label>   
+                    <a href="#" class="btn btn--primary-light mt-40">Daxil ol</a>
+                    <a href="#" class="signin__forgot">
+                        <i class="icon-lock_two_tone"><span class="path1"></span><span class="path2"></span></i>
+                        <span>Şifrəni unutmusan?</span>
+                    </a>
                 </div>
             </form>
-            <aside class="aside">
-                <h2 class="heading__title heading__title--dark mb-24">Artıq hesabınız var?</h2>
-                <a href="./signin.html" class="btn btn--transparent">Daxil ol</a>
-            </aside>
         </section>
     </div>
     <footer class="footer">

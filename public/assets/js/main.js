@@ -146,7 +146,6 @@ tabsChooseSignUp.forEach((tab)=>{
 //form
 const inputs = document.querySelectorAll(".form__input");
 
-
 inputs.forEach((input)=>{
     const label = input.nextElementSibling;
     const warning = label.nextElementSibling;
@@ -173,6 +172,7 @@ inputs.forEach((input)=>{
                 label.style.fontSize="16px";
                 label.style.color="rgba(white, .3)";
         })
+
     input.addEventListener("input",(event)=>{
         input.addEventListener("focusout",(e)=>{
             if(event.target.value){
@@ -182,6 +182,7 @@ inputs.forEach((input)=>{
                 label.style.fontSize="14px";
                 label.style.color="rgba(white, .2)";
                 warning?.classList.add("d-none");
+                
                 
             }
             else{
@@ -196,13 +197,69 @@ inputs.forEach((input)=>{
         });
 
         
+    })
+});
 
-        
+
+//registration
+const btnSignUp = document.querySelector(".btn--registration");
+const helper = document.querySelector(".form__important");
+const btnForm = document.getElementById('check-form');
+const doItRegistration = function(){
+    if ( btnForm.checked === false ) {
+        helper.classList.remove("d-none");
+    }
+    else{
+        helper.classList.add("d-none");
+    }
+}
+if(btnForm){
+
+    btnForm.onchange = function() {
+        doItRegistration();
+    }
+    btnSignUp.addEventListener("click",()=>{
+        doItRegistration();
         
     })
-})
+}
  
+//innovations
+const tabsChooseInnovations = document.querySelectorAll(".innovations__tabs .tabs__adjacent");
+tabsChooseInnovations.forEach((tab)=>{
+    tab.addEventListener("click",()=>{
+        tabsChooseInnovations.forEach((activeTab)=>{
+            activeTab.classList.remove("tabs__adjacent--isActive");
+            activeTab.classList.remove("tabs__adjacent--isActive--light");
+        })
+        tab.classList.add("tabs__adjacent--isActive");
+        tab.classList.add("tabs__adjacent--isActive--light");
+    })
+})
 
 
 
+//shops
+const tabsShopsPage = document.querySelectorAll(".shops-page .tabs__separate");
+tabsShopsPage.forEach((tab)=>{
+    tab.addEventListener("click",()=>{
+        tabsShopsPage.forEach((activeTab)=>{
+            activeTab.classList.remove("tabs__separate--isActiveTariffs");
+        })
+        tab.classList.add("tabs__separate--isActiveTariffs");
+    })
+})
 
+
+//shops-menu
+const shopsMenuToggle = document.querySelector(".shops-page__menu");
+const shopsMenu = document.querySelector(".shops-page__sidebar");
+const shopsCloseMenu = document.querySelector(".shops-page__close-icon");
+shopsMenuToggle.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    shopsMenu.style.left="0%";
+});
+shopsCloseMenu.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    shopsMenu.style.left="100%";
+})
