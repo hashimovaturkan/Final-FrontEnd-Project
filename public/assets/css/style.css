@@ -8828,9 +8828,7 @@ body {
   width: 100%; }
 
 .shops-page__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
   padding: 0.6rem 1.6rem 1rem;
   margin-bottom: 4rem;
   background-color: #3B4046;
@@ -8869,4 +8867,8 @@ body {
     display: inline-block;
     width: 40rem; }
   .shops-page__title-menu {
-    margin-bottom: 5rem; } }
+    margin-bottom: 5rem; }
+  .shops-page__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }

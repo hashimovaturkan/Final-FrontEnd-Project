@@ -96,7 +96,8 @@
         width: 100%;
     }
     &__menu{
-        @include flexbox(space-between);
+        display: none;
+        // @include flexbox(space-between);
         padding: 0.6rem 1.6rem 1rem;
         margin-bottom: 4rem;
         background-color: $black-dark-mode-v2;
@@ -146,5 +147,7 @@
     .shops-page__title-menu{
         margin-bottom: 5rem;
     }
-
+    .shops-page__menu{
+        @include flexbox(space-between);
+    }
 }
