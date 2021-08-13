@@ -66,3 +66,12 @@
     
 
 }
+
+@media screen and (max-width: 575.98px) {
+    .menu__footer{
+        flex-direction: column;
+    }
+    .menu__lang{
+        margin-bottom: 1.5rem;
+    }
+}

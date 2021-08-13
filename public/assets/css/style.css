@@ -6073,6 +6073,14 @@ progress {
   padding-right: 12px;
   padding-left: 12px; }
 
+@media screen and (min-width: 575.98px) {
+  .container {
+    width: auto; } }
+
+@media screen and (min-width: 1399.98px) {
+  .container {
+    width: 1194px; } }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -7616,6 +7624,10 @@ body {
   .calculator--little .tabs__adjacent {
     padding: 1.5rem 3.2rem; } }
 
+@media (max-width: 575.98px) {
+  .tabs__adjacent {
+    padding: 1.5rem 1.5rem; } }
+
 .range {
   padding: 14px;
   position: relative;
@@ -8024,6 +8036,12 @@ body {
   .menu__lang {
     display: flex; }
 
+@media screen and (max-width: 575.98px) {
+  .menu__footer {
+    flex-direction: column; }
+  .menu__lang {
+    margin-bottom: 1.5rem; } }
+
 .accordion__item {
   margin-bottom: 0.8rem; }
 
@@ -8310,7 +8328,7 @@ body {
   .header__cart i:hover {
     color: #C9FFC7; }
 
-@media (max-width: 1399.98px) {
+@media (min-width: 1199.98px) {
   .header__hidden {
     display: none; } }
 
