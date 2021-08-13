@@ -255,11 +255,14 @@ tabsShopsPage.forEach((tab)=>{
 const shopsMenuToggle = document.querySelector(".shops-page__menu");
 const shopsMenu = document.querySelector(".shops-page__sidebar");
 const shopsCloseMenu = document.querySelector(".shops-page__close-icon");
-shopsMenuToggle.addEventListener("click",(e)=>{
-    e.stopPropagation();
-    shopsMenu.style.left="0%";
-});
-shopsCloseMenu.addEventListener("click",(e)=>{
-    e.stopPropagation();
-    shopsMenu.style.left="100%";
-})
+if(shopsMenuToggle){
+    shopsMenuToggle.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        shopsMenu.style.left="0%";
+    });
+    shopsCloseMenu.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        shopsMenu.style.left="100%";
+    })
+    
+}
